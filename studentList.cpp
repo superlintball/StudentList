@@ -7,6 +7,7 @@
 #include <iostream>
 #include <cstring>
 #include <vector>
+#include <iomanip>
 using namespace std;
 
 //struct to define student
@@ -48,7 +49,7 @@ void printStudents(vector<Student*> stList)
 		int position = it - stList.begin();
 
 		cout << stList[position]->firstName << " " << stList[position]-> lastName;
-		cout << ", " << stList[position]->id << ", " << stList[position]->gpa << endl;
+		cout << ", " << stList[position]->id << ", " << setprecision(2) << fixed << stList[position]->gpa << endl;
 	}
 }
 
